@@ -5,7 +5,7 @@ import { Clock, Sun, Moon, Sparkles } from 'lucide-react';
 const schedule = [
     {
         day: "Day 1 - The Arrival",
-        date: "February 18th",
+        date: "February 9th",
         events: [
             { time: "08:00 AM", title: "Arrival at Hogwarts", desc: "Registration & Kit Distribution at Great Hall", icon: Sun },
             { time: "09:00 AM", title: "The Inauguration", desc: "Lighting the Goblet of Fire & Dumbledore's Speech", icon: Sparkles },
@@ -19,7 +19,7 @@ const schedule = [
     },
     {
         day: "Day 2 - The Finale",
-        date: "February 19th",
+        date: "February 10th",
         events: [
             { time: "08:00 AM", title: "Morning Potions", desc: "Breakfast to fuel your magic", icon: Sun },
             { time: "11:00 AM", title: "The Final Hour", desc: "Last minute commits & polish", icon: Clock },
@@ -37,18 +37,21 @@ const TimelineNode = ({ event, index, isLeft }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className={`flex flex-col md:flex-row items-center justify-between w-full mb-8 md:mb-16 ${isLeft ? 'md:flex-row-reverse' : ''}`}
+            className={`flex flex-row md:flex-row items-stretch md:items-center justify-between w-full mb-8 md:mb-16 ${isLeft ? 'md:flex-row-reverse' : ''}`}
         >
             {/* Desktop Spacer (keeps layout balanced) */}
             <div className="hidden md:block w-5/12" />
 
-            {/* Node Point - Centered on Desktop, Left on Mobile */}
-            <div className="absolute left-[34px] md:left-1/2 z-20 flex items-center justify-center w-8 h-8 bg-[#D4AF37] rounded-full shadow-[0_0_15px_rgba(212,175,55,0.6)] border-4 border-black transform md:-translate-x-1/2">
-                <div className="w-2 h-2 bg-white rounded-full" />
+            {/* Mobile: Node Container (Fixed width to align with line) */}
+            {/* Desktop: Absolute Center */}
+            <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2 z-20 flex-shrink-0 w-[100px] md:w-auto flex justify-center pt-2 md:pt-0">
+                <div className="w-8 h-8 bg-[#D4AF37] rounded-full shadow-[0_0_15px_rgba(212,175,55,0.6)] border-4 border-black flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full" />
+                </div>
             </div>
 
             {/* Content Card */}
-            <div className={`w-full md:w-5/12 pl-20 md:pl-0 ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
+            <div className={`flex-1 md:w-5/12 md:flex-none p-0 ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 md:p-6 rounded-lg hover:border-[#D4AF37]/50 transition-colors">
                     <div className={`flex items-center gap-2 mb-2 ${isLeft ? 'md:justify-end' : 'md:justify-start'} text-[#D4AF37]`}>
                         <event.icon size={18} />
@@ -64,7 +67,7 @@ const TimelineNode = ({ event, index, isLeft }) => {
 
 const ScheduleSection = () => {
     return (
-        <section className="relative pt-24 pb-20 px-4 bg-black overflow-hidden min-h-screen">
+        <section className="relative pt-12 md:pt-24 pb-20 px-4 bg-black overflow-hidden min-h-screen">
             <style>{`
                  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
                  .font-serif { font-family: 'Cinzel', serif; }

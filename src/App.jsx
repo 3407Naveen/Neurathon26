@@ -22,16 +22,16 @@ function App() {
       </AnimatePresence>
 
       {/* Navigation (Simple) */}
-      <nav style={{ position: 'fixed', top: 0, width: '100%', padding: '2rem', display: 'flex', justifyContent: 'space-between', zIndex: 100, pointerEvents: 'none' }}>
+      <nav style={{ position: 'fixed', top: 0, width: '100%', padding: 'clamp(0.5rem, 2vw, 2rem)', display: 'flex', justifyContent: 'space-between', zIndex: 100, pointerEvents: 'none', flexWrap: 'wrap', gap: '0.5rem' }}>
         <div
           onClick={() => setShowNeurathon(false)}
           style={{ pointerEvents: 'auto', display: 'flex', gap: '1rem', color: 'var(--gold)', cursor: 'pointer' }}
           className="interactive"
         >
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>NEURATHON '25</span>
+          <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)' }}>NEURATHON '25</span>
         </div>
 
-        <div style={{ pointerEvents: 'auto', display: 'flex', gap: '2rem' }}>
+        <div style={{ pointerEvents: 'auto', display: 'flex', gap: 'clamp(0.5rem, 2vw, 2rem)', flexWrap: 'wrap' }} className="desktop-nav">
           {[
             { id: 'home', label: 'Home' },
             { id: 'about', label: 'About' },
@@ -53,10 +53,11 @@ function App() {
                 color: activeSection === item.id && showNeurathon ? 'var(--gold)' : 'var(--text-primary)',
                 textDecoration: 'none',
                 fontFamily: 'var(--font-heading)',
-                letterSpacing: '0.1em',
-                fontSize: '1rem',
+                letterSpacing: '0.05em',
+                fontSize: 'clamp(0.7rem, 1.8vw, 1rem)',
                 cursor: 'none',
-                transition: 'color 0.3s'
+                transition: 'color 0.3s',
+                whiteSpace: 'nowrap'
               }}
             >
               {item.label}

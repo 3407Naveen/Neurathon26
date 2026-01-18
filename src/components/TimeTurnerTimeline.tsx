@@ -5,7 +5,7 @@ import { Star, Shield, Wand2, Sparkles } from 'lucide-react';
 const TIMELINE_DATA = {
     day1: {
         title: 'DAY 1 - THE ARRIVAL',
-        date: 'February 18th',
+        date: 'February 9th',
         events: [
             { time: '08:00 AM', title: 'ARRIVAL AT HOGWARTS', desc: 'Registration & Kit Distribution at Great Hall.' },
             { time: '09:00 AM', title: 'THE INAUGURATION', desc: "Lighting the Goblet of Fire & Dumbledore's Speech." },
@@ -19,7 +19,7 @@ const TIMELINE_DATA = {
     },
     day2: {
         title: 'DAY 2 - THE FINALE',
-        date: 'February 19th',
+        date: 'February 10th',
         events: [
             { time: '08:00 AM', title: 'MORNING POTIONS', desc: 'Breakfast to fuel your magic.' },
             { time: '10:00 AM', title: 'THE FINAL HOUR', desc: 'Last minute commits & polish.' },
@@ -96,7 +96,7 @@ const TimeTurnerTimeline = () => {
             </nav>
 
             {/* --- Hero Section --- */}
-            <section className="pt-48 pb-32 text-center relative px-6">
+            <section className="pt-12 md:pt-48 pb-32 text-center relative px-6">
                 <motion.h1
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -163,7 +163,7 @@ const TimeTurnerTimeline = () => {
                                         <div key={idx} className={`relative flex items-center md:justify-between ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
 
                                             {/* --- Event Card --- */}
-                                            <div className="w-full md:w-[45%] pl-16 md:pl-0">
+                                            <div className="w-full md:w-[45%] pl-36 md:pl-0">
                                                 <motion.div
                                                     initial={{
                                                         opacity: 0,
