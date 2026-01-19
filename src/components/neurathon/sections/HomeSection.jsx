@@ -18,7 +18,7 @@ const HomeSection = ({ onRegister }) => {
             </div>
 
             <h1 className="magical-text" style={{ fontSize: 'clamp(2.5rem, 10vw, 6rem)', fontFamily: 'var(--font-heading)', marginBottom: '0.5rem' }}>
-                NEURATHON
+                NEURATHON'26
             </h1>
             <h2 style={{ fontSize: 'clamp(1rem, 4vw, 2rem)', color: 'var(--text-primary)', fontFamily: 'var(--font-heading)', letterSpacing: 'clamp(0.1em, 0.5vw, 0.3em)', marginBottom: 'clamp(1rem, 3vw, 2rem)' }}>
                 Code. Create. Conquer.
@@ -66,7 +66,7 @@ const HomeSection = ({ onRegister }) => {
             >
                 Register Now
             </button>
-            <p style={{ opacity: 0.7, fontSize: 'clamp(0.8rem, 2vw, 0.9rem)' }}>Registration Fee: ₹300 per team</p>
+            <p style={{ opacity: 0.7, fontSize: 'clamp(0.8rem, 2vw, 0.9rem)' }}>Registration Fee: ₹100 per participant</p>
         </div>
     );
 };
