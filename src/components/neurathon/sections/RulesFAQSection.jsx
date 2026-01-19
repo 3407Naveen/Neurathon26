@@ -4,7 +4,7 @@ import { Scroll, HelpCircle, AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const RulesFAQSection = () => {
     const rules = [
-        "Teams must consist of 2-4 members.",
+        "Teams must consist of 2-5 members.",
         "Inter-college teams are allowed.",
         "Participants must bring their own laptops and chargers.",
         "AI tools can be used for assistance but not for generating entire codebases.",
@@ -13,9 +13,9 @@ const RulesFAQSection = () => {
     ];
 
     const faqs = [
-        { q: "Is registration fee refundable?", a: "No, the registration fee of ₹300 per team is non-refundable." },
-        { q: "Will food be provided?", a: "Yes, food and refreshments will be provided throughout the 24-hour duration." },
-        { q: "Do we need to stay overnight?", a: "Yes, this is a 24-hour hackathon, and teams are expected to stay at the venue overnight." },
+        { q: "Is registration fee refundable?", a: "No, the registration fee of ₹100 per participant is non-refundable." },
+        { q: "Will food be provided?", a: "Yes, food and refreshments will be provided throughout the 30-hour duration." },
+        { q: "Do we need to stay overnight?", a: "Yes, this is a 30-hour hackathon, and teams are expected to stay at the venue overnight." },
         { q: "Are beginners allowed?", a: "Absolutely! Mentors will be available to guide you through the process." }
     ];
 
