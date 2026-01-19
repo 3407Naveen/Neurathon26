@@ -6,7 +6,7 @@ const PrizesSection = () => {
     const prizes = [
         {
             place: "2nd Place",
-            amount: "₹10,000",
+            amount: "₹6,000",
             subtitle: "Cash Prize",
             rewards: "Internship Opportunity + Swag Kit",
             icon: <Medal size={50} color="#C0C0C0" strokeWidth={1.5} />,
@@ -16,7 +16,7 @@ const PrizesSection = () => {
         },
         {
             place: "1st Place",
-            amount: "₹15,000",
+            amount: "₹10,000",
             subtitle: "Cash Prize",
             rewards: "Internship Opportunity + Swag Kit",
             icon: <Crown size={70} color="#FFD700" strokeWidth={1.5} />,
@@ -28,7 +28,7 @@ const PrizesSection = () => {
         },
         {
             place: "3rd Place",
-            amount: "₹5,000",
+            amount: "₹3,000",
             subtitle: "Cash Prize",
             rewards: "Swag Kit",
             icon: <Award size={50} color="#CD7F32" strokeWidth={1.5} />,
